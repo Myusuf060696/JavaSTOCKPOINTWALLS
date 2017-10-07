@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="32c8d93a-291f-4462-ad87-fb4985c2594e">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     hawker.`kode_hawker` AS hawker_kode_hawker,
+     hawker.`nama` AS hawker_nama,
+     hawker.`telp` AS hawker_telp,
+     hawker.`alamat` AS hawker_alamat,
+     hawker.`tanggal_lahir` AS hawker_tanggal_lahir
+FROM
+     `hawker` hawker]]>
+	</queryString>
+	<field name="hawker_kode_hawker" class="java.lang.String"/>
+	<field name="hawker_nama" class="java.lang.String"/>
+	<field name="hawker_telp" class="java.lang.String"/>
+	<field name="hawker_alamat" class="java.lang.String"/>
+	<field name="hawker_tanggal_lahir" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="44" width="555" height="20" uuid="e63976a3-6357-4b41-9e09-04a9e20b90a8"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DAFTAR HAWKER]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField pattern="dd-MMM-yyyy">
+				<reportElement x="466" y="0" width="89" height="15" uuid="44726498-33c0-4cba-a51c-0703c498a01f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="76" height="20" uuid="d5f828e5-048a-4d92-bceb-2942b233f07f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="76" y="0" width="124" height="20" uuid="a5e93aef-143a-4553-877e-a517f52a57ea"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="200" y="0" width="117" height="20" uuid="8140df1f-480f-4b19-b66d-bff1cc13462f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="317" y="0" width="127" height="20" uuid="b2c0aba7-9eac-4d53-ba9e-0d49008f97c6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="444" y="0" width="111" height="20" uuid="fb83e324-fd38-4f05-bf3d-5b751e26ce9f"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="76" height="20" uuid="a58ee3ce-59a4-4207-b404-eb80eca5121a"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Hawker]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="117" height="20" uuid="7342d6cd-e975-4d5d-b960-ceb42b4c0f9b"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="317" y="0" width="127" height="20" uuid="f52b1393-0315-4b57-a14f-ac3ebe73c6a0"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="20" uuid="207c7d7b-c085-40a5-a050-3a0fbe86df97"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal Lahir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="76" y="0" width="124" height="20" uuid="d9b9a231-16f0-4ba0-93e7-a33acf851d4e"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="76" height="20" uuid="6a2f92b6-20bc-4490-a2b8-bb0dea7640f0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="76" y="0" width="124" height="20" uuid="97cd1fac-34f4-4e48-a12e-88264465d6ca"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="200" y="0" width="117" height="20" uuid="e503df6e-c35f-475f-88fd-86b9600babcf"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="317" y="0" width="127" height="20" uuid="6094b0c7-0507-49fd-b0bd-20bb17cbc0c7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="444" y="0" width="111" height="20" uuid="e88d1f10-450c-435b-a019-360f494d025e"/>
+			</rectangle>
+			<textField>
+				<reportElement x="5" y="0" width="66" height="20" uuid="97fa70eb-50ae-47df-8ec2-9b940bdb68e6"/>
+				<textFieldExpression><![CDATA[$F{hawker_kode_hawker}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="120" height="20" uuid="5b968cf4-d4db-4ede-846a-7b7b0a48e424"/>
+				<textFieldExpression><![CDATA[$F{hawker_nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="206" y="0" width="111" height="20" uuid="cb0225e9-41a5-47c3-af9e-61696efa8b30"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{hawker_telp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="323" y="0" width="117" height="20" uuid="a483217b-f4e1-48f8-a522-8130cfe981c6"/>
+				<textFieldExpression><![CDATA[$F{hawker_alamat}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd-MMM-yyyy">
+				<reportElement x="444" y="0" width="111" height="20" uuid="5a0cddcb-c1ad-4a08-8b0f-a480d7e49746"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{hawker_tanggal_lahir}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8b8e491e-b205-4197-847a-f0a7827d47a9">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     detail_pembelian.`kode_pembelian` AS detail_pembelian_kode_pembelian,
+     detail_pembelian.`kode_produk` AS detail_pembelian_kode_produk,
+     detail_pembelian.`qty` AS detail_pembelian_qty,
+     detail_pembelian.`harga_satuan` AS detail_pembelian_harga_satuan,
+     detail_pembelian.`total` AS detail_pembelian_total,
+     pembelian.`kode_pembelian` AS pembelian_kode_pembelian,
+     pembelian.`kode_pegawai` AS pembelian_kode_pegawai,
+     pembelian.`tanggal` AS pembelian_tanggal
+FROM
+     `pembelian` pembelian INNER JOIN `detail_pembelian` detail_pembelian ON pembelian.`kode_pembelian` = detail_pembelian.`kode_pembelian`]]>
+	</queryString>
+	<field name="detail_pembelian_kode_pembelian" class="java.lang.String"/>
+	<field name="detail_pembelian_kode_produk" class="java.lang.String"/>
+	<field name="detail_pembelian_qty" class="java.lang.Integer"/>
+	<field name="detail_pembelian_harga_satuan" class="java.lang.Integer"/>
+	<field name="detail_pembelian_total" class="java.lang.Integer"/>
+	<field name="pembelian_kode_pembelian" class="java.lang.String"/>
+	<field name="pembelian_kode_pegawai" class="java.lang.String"/>
+	<field name="pembelian_tanggal" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="48" width="555" height="20" uuid="f956736a-0c9d-469f-9f07-339f114c6097"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN PEMBELIAN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="41" y="0" width="69" height="20" uuid="3ae9bc90-36b0-41bc-84a0-83b5de44e4e9"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="110" y="0" width="85" height="20" uuid="ec610881-d35c-41fd-8b7e-7748c26afb2a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="195" y="0" width="46" height="20" uuid="1bf2529f-6ec5-4e1d-9ed2-aeb2c1c5ab37"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="241" y="0" width="69" height="20" uuid="005619b2-0853-4a94-94ba-763c48732107"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="310" y="0" width="69" height="20" uuid="6031cdbd-7a75-4eac-a9ff-aefe0abf2866"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="379" y="0" width="69" height="20" uuid="e2d84d39-0c91-40d4-b71a-095dd9113617"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="41" y="0" width="69" height="20" uuid="5556c356-31e9-49af-918b-deada0704884"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Kode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="0" width="85" height="20" uuid="6ae870ad-60e3-43f8-9458-2e6de00bd597"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Kode Produk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="0" width="46" height="20" uuid="c50b858f-2b5a-4db9-b523-8f5cde8f8af7"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="241" y="0" width="69" height="20" uuid="55f24820-5ad0-4ffe-b9a5-48cf95420ad8"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Harga Satuan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="0" width="69" height="20" uuid="6731de32-d609-40c8-8c26-c257aef6cbf4"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="379" y="0" width="69" height="20" uuid="16040fcd-6c3b-4205-bcec-7fcd193880f5"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="41" y="0" width="69" height="20" uuid="8f97f4f8-f805-49a4-ab5d-893da7c93715"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="110" y="0" width="85" height="20" uuid="53c96d18-64a8-4163-907a-2f271617c6a1"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="195" y="0" width="46" height="20" uuid="346cd485-9f8a-4172-b589-86e1642ff114"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="241" y="0" width="69" height="20" uuid="8aeafaf1-09a0-4f2a-a5bc-27c52aaa57a3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="310" y="0" width="69" height="20" uuid="c7e98b51-5e93-4707-8690-d6d3662ed9be"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="379" y="0" width="69" height="20" uuid="8ef954bf-6cc0-4c6c-8efd-c7f042e811f2"/>
+			</rectangle>
+			<textField>
+				<reportElement x="49" y="0" width="57" height="20" uuid="20b8e9dd-f3c4-4b76-9124-8fd4baac6596"/>
+				<textFieldExpression><![CDATA[$F{detail_pembelian_kode_pembelian}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="0" width="71" height="20" uuid="639c93a4-989a-41f4-8e25-3143085f9016"/>
+				<textFieldExpression><![CDATA[$F{detail_pembelian_kode_produk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="0" width="35" height="20" uuid="7965f733-81c1-419e-9183-7adbe73f6c50"/>
+				<textFieldExpression><![CDATA[$F{detail_pembelian_qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="248" y="0" width="58" height="20" uuid="cc2c6f2d-4973-483c-bf77-dd28aee1108e"/>
+				<textFieldExpression><![CDATA[$F{detail_pembelian_harga_satuan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="314" y="0" width="59" height="20" uuid="b6402804-f175-4df2-a0a3-835ee8426ec8"/>
+				<textFieldExpression><![CDATA[$F{detail_pembelian_total}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MM/dd/yyyy">
+				<reportElement x="384" y="0" width="59" height="20" uuid="e13fdb47-2292-4d22-b700-fa52eb48d165"/>
+				<textFieldExpression><![CDATA[$F{pembelian_tanggal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
